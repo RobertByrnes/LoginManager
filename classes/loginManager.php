@@ -1,4 +1,6 @@
 <?php
+Namespace RBDev\LoginManager;
+
 session_start();
 require __DIR__ . '\..\vendor\autoload.php';
 

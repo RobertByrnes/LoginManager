@@ -1,4 +1,6 @@
 <?php
+Namespace RBDev\TemplateEngine;
+
 require __DIR__ . '\..\vendor\autoload.php';
 
 Class TemplateEngine

@@ -10,7 +10,9 @@
     },
     "autoload": {
         "psr-4": {
-            "": "classes/"
+            "RBDev\\LoginManager\\": "classes/",
+            "RBDev\\TemplateEngine\\": "classes/",
+            "": "vendor/"
         }
     }
 }

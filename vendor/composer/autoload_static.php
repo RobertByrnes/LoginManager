@@ -6,8 +6,27 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit3105d010a93c83b6de2dbbfbdb8aa11d
 {
+    public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'RBDev\\TemplateEngine\\' => 21,
+            'RBDev\\LoginManager\\' => 19,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'RBDev\\TemplateEngine\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes',
+        ),
+        'RBDev\\LoginManager\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes',
+        ),
+    );
+
     public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/../..' . '/classes',
+        0 => 'C:\\wamp64\\www\\repositories\\LoginManager\\vendor',
         1 => __DIR__ . '/..' . '/robertbyrnes/dataconnection/classes',
         2 => __DIR__ . '/..' . '/robertbyrnes/login/classes',
     );
@@ -192,6 +211,8 @@ class ComposerStaticInit3105d010a93c83b6de2dbbfbdb8aa11d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3105d010a93c83b6de2dbbfbdb8aa11d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3105d010a93c83b6de2dbbfbdb8aa11d::$prefixDirsPsr4;
             $loader->fallbackDirsPsr4 = ComposerStaticInit3105d010a93c83b6de2dbbfbdb8aa11d::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInit3105d010a93c83b6de2dbbfbdb8aa11d::$classMap;
 

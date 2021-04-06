@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '' => array($baseDir . '/classes', $vendorDir . '/robertbyrnes/dataconnection/classes', $vendorDir . '/robertbyrnes/login/classes'),
+    'RBDev\\TemplateEngine\\' => array($baseDir . '/classes'),
+    'RBDev\\LoginManager\\' => array($baseDir . '/classes'),
+    '' => array($vendorDir . '', $vendorDir . '/robertbyrnes/dataconnection/classes', $vendorDir . '/robertbyrnes/login/classes'),
 );
