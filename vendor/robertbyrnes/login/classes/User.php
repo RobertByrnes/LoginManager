@@ -64,16 +64,9 @@ class User extends DataConnection
     {
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 		$password = filter_var($password, FILTER_DEFAULT);
-        if (is_null($this->dB))
-        {
-            $this->userMessage = $this->message;
-            return FALSE;
-        }
 
-        else
+        if ($user = $this->preparedQueryRow("SELECT id, failures, password, permission, confirmed FROM `users` WHERE email=:email", array('email' => $email)))
         {
-            $user = $this->preparedQueryRow("SELECT id, failures, password, permission, confirmed FROM `users` WHERE email=:email", array('email' => $email));
-
             if (isset($user->password) && password_verify($password, $user->password))
             {
                 if ($user->confirmed === 0)

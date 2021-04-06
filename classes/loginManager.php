@@ -46,7 +46,7 @@ Class LoginManager extends User
 		{
 			case 'register': 			$this->registerNewUser($email, $fName, $lName, $password); 	break;
 			case 'activation.script': 	$page='activation'; 										break;
-			case 'activate': 			$this->activateNewUser($email, $templateData['authCode']); 					break;
+			case 'activate': 			$this->activateNewUser($email, $templateData['authCode']); 	break;
 			case 'login': 				$this->login($email, $password); 							break;
 			case 'logout':				$this->user->logout();										break;
 			case 'password.script': 	$page='passwordChange'; 									break;
@@ -132,7 +132,8 @@ Class LoginManager extends User
 	{
 		if ($this->user->login($email, $password))
 		{
-			header('Location: /index.php');
+			echo 'success';
+			exit;
 		}
 
 		else

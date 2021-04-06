@@ -16,10 +16,8 @@
                     </div>
                     <div class="form-group">
                         <div class="row justify-content-center">
-                            <div class="col-sm-6 col-sm-offset-3">
-                                <input type="button" name="login-submit" id="login-submit" tabindex="2"
-                                    class="btn btn-register text-muted font-weight-bold" value="Log In">
-                            </div>
+                            <input type="button" name="login-submit" id="login-submit" tabindex="2"
+                                class="btn btn-register text-muted font-weight-bold" value="Log In">
                         </div>
                     </div>
                 </form>
